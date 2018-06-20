@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      Display Lessons
+    </div>
+  </div>
+  <% @lessons.each do |lesson| %>
+  <%= lesson.name %>
+  <%= lesson.description %>
+  <%= lesson.syntax %>
+
+  <%end %>
+</div>
