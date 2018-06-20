@@ -1,5 +1,8 @@
 {
   "name": "coding_buds",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "4.1.1",
+    "jQuery": "^1.7.4"
+  }
 }
