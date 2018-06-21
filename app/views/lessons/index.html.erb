@@ -5,12 +5,32 @@
     </div>
   </div>
   <% @lessons.each do |lesson| %>
-  <%= lesson.name %>
-  <%= lesson.description %>
-  <%= lesson.syntax %>
-
-  <%= link_to 'Edit Lesson', edit_lesson_path(lesson) %>
-  <%= link_to 'Delete Lesson', lesson_path(lesson), method: :delete %>
+    <div class="row">
+      <div class="col-lg-12">
+        <%= lesson.name %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <%= lesson.description %>
+      </div>
+    </div>
+    <%= lesson.syntax %>
+    <div class="row">
+      <div class="col-lg-12">
+        <%= link_to 'Edit Lesson', edit_lesson_path(lesson) %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <%= link_to 'Delete Lesson', lesson_path(lesson), method: :delete %>
+      </div>
+    </div>
 
   <% end %>
+  <div class="row">
+    <div class="col-lg-12">
+      <%= render 'admins/shared/adminlinks' %>
+    </div>
+  </div>
 </div>
