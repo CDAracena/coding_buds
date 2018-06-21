@@ -4,11 +4,13 @@ class LessonsController < ApplicationController
 end
 
 def show
+  @lesson = Lesson.find(params[:id])
 
 end
 
 def new
   @lesson = Lesson.new
+  @languages = Language.all
 
 end
 
@@ -22,10 +24,15 @@ def create
 end
 
 def edit
+  @lesson = Lesson.find(params[:id])
 
 end
 
 def update
+  lesson = Lesson.find(params[:id])
+  lesson.update(lessons_params)
+
+  redirect_to lessons_path
 
 end
 
@@ -39,6 +46,6 @@ def lessons_params
   # will return something that looks like this:
   # {name: '....', description: '...', syntax: '...'} + {admin_id: '...'} = {name: '....', description: '...', syntax: '...', admin_id: '...'}
 
-    params.require(:lesson).permit(:name, :description, :syntax)
+    params.require(:lesson).permit(:name, :description, :syntax, :language_id)
   end
 end

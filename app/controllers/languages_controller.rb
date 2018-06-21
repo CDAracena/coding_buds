@@ -8,7 +8,6 @@ def show
 end
 
 def new
-
   @language = Language.new
 
 end
