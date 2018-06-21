@@ -11,8 +11,45 @@
  * It is generally better to create a new file per style scope.
  *
 
- *= require bootstrap/scss/bootstrap.scss
- *= require mdbootstrap/scss/mdb.scss
+ *= require bootstrap/dist/css/bootstrap
+ *= require mdbootstrap/css/mdb
  *= require_tree .
  *= require_self
  */
+
+//@import "font-awesome";
+.h1 {
+
+    text-align: center;
+}
+
+a.list-group-item-success {
+    text-align: center;
+    font-size: 30px;
+}
+
+a[href^="#list-html-lesson"],
+a[href^="#list-css-lesson"],
+a[href^="#list-js-lesson"] {
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+
+.navbar {
+    background-color: #7979d2;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+.form {
+    //    width: 60%;
+    margin: 0 auto;
+}
+
+.form-group label {
+    font-size: 20px;
+    font-weight: 500;
+}
