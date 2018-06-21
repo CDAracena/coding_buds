@@ -37,6 +37,9 @@ def update
 end
 
 def destroy
+  Lesson.destroy(params[:id])
+
+  redirect_to lessons_path
 
 end
 

@@ -1,11 +1,16 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      Display Lessons
+      Lessons Main
     </div>
   </div>
   <% @lessons.each do |lesson| %>
   <%= lesson.name %>
-  <%=link_to 'Edit Lesson', edit_lesson_path(lesson) %>
-  <%end %>
+  <%= lesson.description %>
+  <%= lesson.syntax %>
+
+  <%= link_to 'Edit Lesson', edit_lesson_path(lesson) %>
+  <%= link_to 'Delete Lesson', lesson_path(lesson), method: :delete %>
+
+  <% end %>
 </div>

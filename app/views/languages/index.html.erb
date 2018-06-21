@@ -1,4 +1,6 @@
 <% @languages.each do |language| %>
 <%=language.name %>
 <%=language.description %>
+<%= link_to 'Edit Language', edit_language_path(language) %>
+<%= link_to 'Delete Language', language_path(language), method: :delete %>
 <% end %>

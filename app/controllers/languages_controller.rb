@@ -19,15 +19,22 @@ def create
 end
 
 def edit
+  @language = Language.find(params[:id])
+
 
 end
 
 def update
+  language = Language.find(params[:id])
 
+  language.update(languages_params)
+
+  redirect_to languages_path
 end
 
 def destroy
-
+  Language.destroy(params[:id])
+  redirect_to languages_path
 end
 
 private
