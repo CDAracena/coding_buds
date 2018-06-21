@@ -1,0 +1,30 @@
+<div class="containers">
+
+  <%= form_for @lesson do |f| %>
+  <div class="row">
+    <div class="col-lg-6">
+      <%= f.label :name %>
+      <%= f.text_field :name, class:'form-control' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <%= f.label :description %>
+      <%= f.text_field :description, class:'form-control' %>
+    </div>
+  </div>
+  <div class='row'>
+    <div class="col-lg-6">
+      <%= f.label :syntax %>
+      <%= f.text_area :syntax, class:'form-control' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <%= f.submit 'Edit Lesson', class:'btn' %>
+    </div>
+  </div>
+<% end %>
+
+</div>
