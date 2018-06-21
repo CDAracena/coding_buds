@@ -5,3 +5,4 @@ class Lesson < ApplicationRecord
   has_many :comments
 
 end
+

@@ -73,7 +73,39 @@
   
   
   </div>
+<!--  End of <div class="row">-->
+<div class="media">
+<!--  <img class="mr-3" src="comments64.png" alt="Generic placeholder image">-->
+   <%=  image_tag image_path('comments64.png'), alt: 'My comment', class: "mr-3" %>
+  <div class="media-body">
+    <h5 class="mt-0">Comments Subject</h5>
+    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
 
+    <div class="media mt-3">
+      <a class="pr-3" href="#">
+<!--        <img src="reply64.png" alt="Generic placeholder image">-->
+        <%=  image_tag image_path('reply64.png'), alt: 'My reply' %>
+      </a>
+      <div class="media-body">
+        <h5 class="mt-0">Reply Subject</h5>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+      </div>
+    </div>
+  </div>
+</div>
+ <br>
+ <form class="form col-lg-6 col-md-8">
+  <div class="form-group">
+    <label for="formGroupExampleInput">Submit Comments</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Subject">
+  </div>
+  
+    <div class="form-group">
+<!--    <label for="exampleFormControlTextarea1">Example textarea</label>-->
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="comments"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
 
    
