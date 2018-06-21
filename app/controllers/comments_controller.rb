@@ -1,18 +1,20 @@
 class CommentsController < ApplicationController
   def index
-      @comments = Comments.all.order(:created_at)
+      @comments = Comment.all.order(:created_at)
     end
     
     def new
         @comment = Comment.new
+        @lessons = Lesson.all
     end
     
     def show
-         @comment = Comment.find(params[:id])
+        lesson = Lesson.find(params[:id])
+         @comment = lesson.comment
     end
     
     def create
-        Comment.create(comment_params)
+        Comment.create(comments_params)
         flash[:success]='You have successfully created comment'
         redirect_to comments_path
     end
@@ -43,7 +45,7 @@ def comments_params
   # will return something that looks like this:
   # {name: '....', :description: '...'}
 
-    params.require(:comment).permit(:description, :lesson_id)
+    params.require(:comment).permit(:description, :lesson_id, :subject)
   end
 
 end

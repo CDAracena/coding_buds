@@ -1,0 +1,31 @@
+<div>
+    <a href="<%= root_path %>">Go HOME</a>
+</div>
+
+<%= form_for @comment do |f| %>
+  <div class="row">
+    <div class="col-lg-6 mx-auto">
+      <%= f.label :subject %>
+      <%= f.text_field :subject, class:'form-control' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 mx-auto">
+      <%= f.label :description %>
+      <%= f.text_field :description, class:'form-control' %>
+    </div>
+  </div>
+ 
+  <div class="row">
+    <div class="col-lg-6 mx-auto">
+      <%= f.label :lesson_id %>
+      <%= f.select :lesson_id, options_for_select(@lessons.map {|l|[l.name, l.id]}) %>
+
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 mx-auto">
+      <%=f.submit 'Create a Comment', class:'btn-primary' %>
+    </div>
+  </div>
+<% end %>
