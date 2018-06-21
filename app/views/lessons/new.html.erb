@@ -27,6 +27,12 @@
     </div>
   </div>
   <div class="row">
+    <div class="col-lg-6 mx-auto">
+      <%= f.label :language_id %>
+      <%= f.select :language_id, options_for_select(@languages.map {|l|[l.name, l.id]}) %>
+
+  </div>
+  <div class="row">
     <div class="col-lg-12 text-center">
       <%=f.submit 'Create a Lesson', class:'btn' %>
     </div>
