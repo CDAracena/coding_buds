@@ -6,11 +6,11 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+
   </head>
 
   <body>
-      
+
   <nav class="navbar navbar-light">
   <a href="<%= root_path %>" class="navbar-brand" style="font-family: 'Lobster', cursive; font-size: 50px;"><i class="fas fa-cog fa-spin"></i>Coding Buds</a>
   <form class="form-inline">
@@ -19,7 +19,9 @@
   </form>
 </nav>
    <br>
-   
+
     <%= yield %>
+
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>
