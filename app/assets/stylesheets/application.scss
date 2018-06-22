@@ -29,11 +29,10 @@ a.list-group-item-success {
     font-size: 30px;
 }
 
-a[href^="#list-html-lesson"],
-a[href^="#list-css-lesson"],
-a[href^="#list-js-lesson"] {
+a.language {
     margin-left: 15px;
     font-size: 16px;
+    font-weight: 600;
 }
 
 

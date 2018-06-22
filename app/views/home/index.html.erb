@@ -17,25 +17,14 @@
   <div class="col-4">
     <div class="list-group" id="list-tab" role="tablist">
       <a class="list-group-item-success list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
-      
-      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"><i class="fa fa-code fa-2x fa-pull-left" aria-hidden="true"></i>HTML</a>
+    <% @languages.each do |language| %>
+      <a class="list-group-item list-group-item-action language" id="list-<%= language.name %>-list" data-toggle="list" href="#list-<%= language.name %>" role="tab" aria-controls="<%= language.name %>"><i class="fa fa-code fa-2x fa-pull-left" aria-hidden="true"></i><%= language.name %></a>
+         <% language.lessons.each do |lesson| %> 
+          <a class="list-group-item list-group-item-action" id="list-<%= lesson.name %>-list" data-toggle="list" href="#list-<%= lesson.name %>" role="tab" aria-controls="<%= lesson.name %>"> <%= lesson.name %></a>
          
-          <a class="list-group-item list-group-item-action" id="list-html-lesson1-list" data-toggle="list" href="#list-html-lesson1" role="tab" aria-controls="html-lesson1">HTML lesson1</a>
-          <a class="list-group-item list-group-item-action" id="list-html-lesson2-list" data-toggle="list" href="#list-html-lesson2" role="tab" aria-controls="html-lesson2">HTML lesson2</a>
-          <a class="list-group-item list-group-item-action" id="list-html-lesson3-list" data-toggle="list" href="#list-html-lesson3" role="tab" aria-controls="html-lesson3">HTML lesson3</a>
-        
-      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages"><i class="fa fa-file-code fa-2x fa-pull-left"></i>CSS</a>
-          
-          <a class="list-group-item list-group-item-action" id="list-css-lesson1-list" data-toggle="list" href="#list-css-lesson1" role="tab" aria-controls="css-lesson1">CSS lesson1</a>
-          <a class="list-group-item list-group-item-action" id="list-css-lesson2-list" data-toggle="list" href="#list-css-lesson2" role="tab" aria-controls="css-lesson2">CSS lesson2</a>
-          <a class="list-group-item list-group-item-action" id="list-css-lesson3-list" data-toggle="list" href="#list-css-lesson3" role="tab" aria-controls="css-lesson3">CSS lesson3</a>
-      
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><i class="fas fa-camera-retro fa-2x"></i>Javascript</a>
-          
-          <a class="list-group-item list-group-item-action" id="list-js-lesson1-list" data-toggle="list" href="#list-js-lesson1" role="tab" aria-controls="js-lesson1">Javascript lesson1</a>
-           <a class="list-group-item list-group-item-action" id="list-js-lesson2-list" data-toggle="list" href="#list-js-lesson2" role="tab" aria-controls="js-lesson2">Javascript lesson2</a>
-            <a class="list-group-item list-group-item-action" id="list-js-lesson3-list" data-toggle="list" href="#list-js-lesson3" role="tab" aria-controls="js-lesson3">Javascript lesson3</a>
-            
+        <% end %>
+    
+    <% end %>    
   </div>
   </div>
   
@@ -45,35 +34,53 @@
   <div class="col-8">
     <div class="tab-content" id="nav-tabContent">
       <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">Home Home ipsum dolor sit amet, consectetur adipisicing elit. Amet, perspiciatis iure qui porro, quaerat esse fugit ipsam minima eveniet magnam temporibus? Cupiditate quam pariatur fugit sapiente iusto laudantium ab illum consectetur nihil et, sequi numquam explicabo, architecto quae voluptatem a omnis libero, minima aperiam. Odit aliquam molestiae beatae velit iure consequatur ex voluptas obcaecati impedit. At, ad dolorem aut voluptas nulla obcaecati reprehenderit modi. Accusantium modi placeat voluptatum eum hic eveniet minus sequi ullam maiores praesentium, aut beatae labore eligendi officia dicta cum autem, esse, blanditiis veniam! Sit minus magni inventore ratione est numquam, eum, ex repellat. Iure maxime, voluptatem.</div>
-           
-      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">HTML HTML ipsum dolor sit amet, consectetur adipisicing elit. Explicabo laboriosam minima, commodi. Provident maiores placeat quibusdam sit aliquid, fuga perferendis dolores odio animi, id impedit magnam. Perferendis, laboriosam, error. Magni iure aperiam ullam distinctio, illo possimus qui corporis commodi animi velit sunt aliquid, eum eveniet. Quae facere veniam sit esse quod explicabo excepturi cum quia, odit tempora quo aliquam at quis rerum eaque, suscipit nisi dolorum libero quasi expedita placeat! Magni veritatis esse odit aliquid accusantium fugiat, odio provident officia repellat. Facilis ab sapiente eum, quibusdam corporis labore fuga. Error debitis delectus sed rerum sapiente molestiae odio quod, enim voluptates.</div>
+         <% @languages.each do |language| %>
+      <div class="tab-pane fade" id="list-<%= language.name %>" role="tabpanel" aria-labelledby="list-<%= language.name %>-list"><%= language.description %></div>
+      
+        <% language.lessons.each do |lesson| %> 
+           <div class="tab-pane fade" id="list-<%= lesson.name %>" role="tabpanel" aria-labelledby="list-<%= lesson.name %>-list"><%= lesson.description %></div>
+        <% end %> 
+    <% end %> 
+          
       
       
-           <div class="tab-pane fade" id="list-html-lesson1" role="tabpanel" aria-labelledby="list-html-lesson1-list">r nihil et, sequi numquam explicabo, architecto quae voluptatem a omnis libero, minima aperiam. Odit aliquam molestiae beatae velit iure consequatur ex voluptas obcaecati impedit. At, ad dolorem aut voluptas nulla obcaecati reprehenderit modi. Accusantium modi placeat voluptatum eum hic eveniet minus sequi ullam maiores praesentium, aut beatae labore eligendi officia dicta cum autem, esse, blanditiis veniam! Sit minus magni inventore ratione est numquam, eum, ex repellat. Iure maxime, voluptatem.</div>
-          <div class="tab-pane fade" id="list-html-lesson2" role="tabpanel" aria-labelledby="list-html-lesson2-list">AAAAAAAAAAAAAAAAAAAng elit. Amet, perspiciatis iure qui porro, quaerat esse fugit ipsam minima eveniet magnam temporibus? Cupiditate quam pariatur fugit sapiente iusto laudantium ab illum consectetur nihil et, sequi numquam explicabo, architecto quae voluptatem a omnis libero, minima aperiam. Odit aliquam molestiae beatae velit iure consequatur ex voluptas obcaecati impedit. At, ad dolorem aut voluptas nulla obcaecati reprehenderit modi. Accusantium modi placeat voluptatum eum hic eveniet minus sequi ullam maiores praesentium, aut beatae labore eligendi officia dicta cum autem, esse, blanditiis veniam! Sit minus magni inventore ratione est numquam, eum, ex repellat. Iure maxime, voluptatem.</div>
-          <div class="tab-pane fade" id="list-html-lesson3" role="tabpanel" aria-labelledby="list-html-lesson3-list">BBBBBBBBBBBBBBBBBBBBBlit iure consequatur ex voluptas obcaecati impedit. At, ad dolorem aut voluptas nulla obcaecati reprehenderit modi. Accusantium modi placeat voluptatum eum hic eveniet minus sequi ullam maiores praesentium, aut beatae labore eligendi officia dicta cum autem, esse, blanditiis veniam! Sit minus magni inventore ratione est numquam, eum, ex repellat. Iure maxime, voluptatem.</div>
+    </div>  <!--  Endo of  <div class="tab-content" id="nav-tabContent">-->
+  </div>   <!--  Endo of <div class="col-8">-->
+</div>
+<!--  End of <div class="row">-->
+<br>
 
-      
-      
-      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda velit impedit iure laudantium deserunt? Reprehenderit animi numquam rerum sunt voluptates eum libero ullam amet ratione dignissimos soluta alias explicabo recusandae quos nostrum fugit uia, nte sed quidem earum enim! Maxime adipisci iure deserunt libero velit illo omnis alias soluta qui, quaerat illum minima asperiores, eligendi, quae excepturi. Eveniet dolorum minima omnis adipisci atque, nam fuga quos cum laborum rerum, molestias. Delectus sint repellendus reprehenderit aperiam, blanditiis autem, perspiciatis sit dolores cupiditate accusamus iusto deserunt, labore eius harum natus temporibus repudiandae? Nihil minima, perferendis dignissimos possimus error consequuntur tempore quasi sit hic illum similique deleniti et, iusto nobis ut quas eius, nulla rerum non quia adipisci quibusdam. Nobis repellat praesentium, harum suscipit laborum magnam totam sit facere officiis maxime inventore dicta, at non voluptate quibusdam, provident laudantium accusamus blanditiis incidunt enim ullam maiores. Odit ex praesentium velit dignissimos asperiores laborum cupiditate sapiente corporis, sit quis ratione perspiciatis tempore eos rerum ea id earum voluptatibus rem reprehenderit voluptates aliquid culpa unde commodi. Quo, aspernatur at explicabo adipisci eius reiciendis repudiandae, dolor et placeat nulla totam. Architecto facilis voluptas voluptatem tempora explicabo vitae necessitatibus adipisci tenetur quibusdam. Fugit illum, modi autem voluptas esse molestias ratione corporis, animi tenetur, omnis libero facilis rem harum perferendis et rerum expedita totam nihil odio error at. Placeat veniam fuga, laborum voluptas, beatae aut tenetur rem necessitatibus temporibus explicabo nisi maxime numquam. Temporibus nesciunt veritatis aut et optio eum dolorum cum quia aspernatur beatae sit voluptatem obcaecati incidunt modi perferendis ut adipisci, maxime quis saepe, rem atque impedit voluptatum at. Impedit explicabo necessitatibus nisi ex doloribus inventore reiciendis, eos architecto placeat fuga quo nostrum atque hic cupiditate, repudiandae nam. Autem quasi laudantium excepturi quibusdam aut et eveniet molestias asperiores tempore exercitationem illum quidem fuga, sint doloremque accusamus incidunt quae voluptatem impedit quia obcaecati amet adipisci quis quaerat. Natus itaque voluptate cum repellendus tenetur hic reiciendis deleniti facilis earum! Consectetur culpa beatae, illum, corporis error nam autem maiores obcaecati molestias veniam optio, nemo id! Perferendis harum aperiam soluta deserunt, quibusdam quae, temporibus libero voluptates ullam repellat ad iusto esse fugit unde, eos nulla repudiandae quaerat nesciunt, corporis officiis quos laudantium suscipit facere natus pariatur! Laboriosam repellendus, quibusdam ipsa aliquid unde neque quo. Dolor recusandae at saepe distinctio. Explicabo dolore veniam omnis ea, rem libero molestias aperiam porro ex facilis odit ratione? Dolore harum labore </div>
-           <div class="tab-pane fade" id="list-css-lesson1" role="tabpanel" aria-labelledby="list-css-lesson1-list">r CSS11111 et, sequi numquam explicabo, architecto quae voluptatem a omnis libero, minima aperiam. Odit aliquam molestiae beatae velit iure consequatur ex voluptas obcaecati impedit. At, ad dolorem aut voluptas nulla obcaecati reprehenderit modi. Accusantium modi placeat voluptatum eum hic eveniet minus sequi ullam maiores praesentium, aut beatae labore eligendi officia dicta cum autem, esse, blanditiis veniam! Sit minus magni inventore ratione est numquam, eum, ex repellat. Iure maxime, voluptatem.</div>
-           <div class="tab-pane fade" id="list-css-lesson2" role="tabpanel" aria-labelledby="list-css-lesson2-list">r 222222222222222222 et, sequi numquam explicabo, architecto quae voluptatem a omnis libero, minima aperiam. Odit aliquam molestiae beatae velit iure consequatur ex voluptas obcaecati impedit. At, ad dolorem aut voluptas nulla obcaecati reprehenderit modi. Accusantium modi placeat voluptatum eum hic eveniet minus sequi ullam maiores praesentium, aut beatae labore eligendi officia dicta cum autem, esse, blanditiis veniam! Sit minus magni inventore ratione est numquam, eum, ex repellat. Iure maxime, voluptatem.</div>
-            <div class="tab-pane fade" id="list-css-lesson3" role="tabpanel" aria-labelledby="list-css-lesson3-list">333333333333333333333et, sequi numquam explicabo, architecto quae voluptatem a omnis libero, minima aperiam. Odit aliquam molestiae beatae velit iure consequatur ex voluptas obcaecati impedit. At, ad dolorem aut voluptas nulla obcaecati reprehenderit modi. Accusantium modi placeat voluptatum eum hic eveniet minus sequi ullam maiores praesentium, aut beatae labore eligendi officia dicta cum autem, esse, blanditiis veniam! Sit minus magni inventore ratione est numquam, eum, ex repellat. Iure maxime, voluptatem.</div>
-      
-      
-      
-      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut nemo tenetur, temporibus iusto? Sint molestiae accusantium nulla delectus, praesentium cumque non iure aliquam excepturi quo voluptas, enim ex suscipit nihil asperiores provident neque pariatur aspernatur dolore perspiciatis in ea! Labore molestiae accusantium molestias illum, quaerat quia recusandae rem. Omnis cum, totam quam officia debitis explicabo doloribus quasi fugiat a in eligendi unde ea veritatis animi neque asperiores veniam, numquam nulla aliquid reprehenderit, suscipit provident? Quisquam est iure voluptates impedit similique natus aut sit, distinctio repellat unde aspernatur ipsa, voluptatem, illum earum perferendis odio id dolorem, molestiae. Aperiam esse provident laborum odio facilis alias quas minus repellat et enim quisquam quae eveniet magnam, distinctio vitae in optio perspiciatis repellendus, architecto illum eaque saepe. Animi, omnis. Temporibus rem aliquid provident aspernatur odit voluptas laudantium asperiores, pariatur recusandae voluptate fuga commodi, deserunt dolorem illo sapiente minima, numquam eligendi nam blanditiis aperiam minus magni assumenda quis eius. Cum consequuntur ipsa eveniet, debitis tenetur dolore, nostrum officia quas dolorem, fuga aliquam. Deleniti sint illo odit repellat labore tempore temporibus, architecto perspiciatis asperiores, iste maxime officia delectus ducimus illum error explicabo cum, obcaecati at laborum natus molestiae libero repellendus fugit. Accusamus labore, autem quibusdam quis. Amet est laudantium suscipit, perferendis accusamus dolorum. Debitis quod nam commodi velit ex sunt nemo eius consequatur dolor eaque. Impedit possimus excepturi beatae optio repellat, nostrum. Sunt ipsa architecto neque eaque quisquam eveniet, voluptatum praesentium hic illo molestiae aliquam recusandae laudantium animi vel error. Ab neque perspiciatis deserunt inventore cum, voluptatibus, ratione ullam tenetur voluptatum dolores. Totam laboriosam temporibus distinctio ad rerum incidunt dolor qui, commodi, dolore voluptatibus, accusantium? Inventore ipsa soluta, iure cumque quasi. Ipsam rerum accusantium repellendus cumque recusandae quo, impedit hic quod, eum veritatis iure, libero? Magni temporibus aliquam placeat necessitatibus optio ipsa numquam soluta, eum atque itaque cum voluptas ipsum. Provident, quasi. Est totam, corporis. Libero asperiores vero perspiciatis autem minus atque esse amet deleniti nesciunt illum adipisci odio repellat deserunt distinctio, doloribus quibusdam optio architecto est! Doloremque suscipit nemo quas labore aut, minima commodi totam, similique dicta vero quidem nulla inventore harum quis incidunt eum sequi nam quaerat asperiores voluptatem iste eaque nisi. Labore dolores expedita culpa! Impedit temporibus dolore odio quis provident repudiandae aspernatur accusamus quo dolor mollitia autem voluptatum cupiditate, cum saepe delectus dolorem expedita minima sit corporis quia facilis. Corrupti consequuntur perspiciatis est. Doloribus culpa at natus et ad porro in, odio quaerat, voluptas necessitatibus ipsum, vel molestias, laborum. Facere iste corrupti alias ab est saepe aperiam fugiat vel, dolor architecto consequatur asperiores quo ratione cumque nisi consequuntur quod cupiditate, magnam molestias doloremque, laudantium exercitationem voluptatum expedita enim eos. Vel non assumenda quae quasi quo, iusto suscipit voluptatibus eum qui voluptatum eius doloremque ut, tempore eaque a fugit animi facere ipsa dolorem quam quos! Expedita suscipit molestias voluptatum nesciunt tenetur, magni laboriosam at aliquam ut ab iste cumque facere quas repellendus aut distinctio odit, dolorum quod voluptate totam quis consequatur. Aliquid, enim unde quam non perferendis dicta molestiae fuga amet illo! Iusto, expedita!</div>
-      
-         <div class="tab-pane fade" id="list-js-lesson1" role="tabpanel" aria-labelledby="list-js-lesson1-list">r JSSAAAAAA et, sequi numquam explicabo, architecto quae voluptatem a omnis libero, minima aperiam. Odit aliquam molestiae beatae velit iure consequatur ex voluptas obcaecati impedit. At, ad dolorem aut voluptas nulla obcaecati reprehenderit modi. Accusantium modi placeat voluptatum eum hic eveniet minus sequi ullam maiores praesentium, aut beatae labore eligendi officia dicta cum autem, esse, blanditiis veniam! Sit minus magni inventore ratione est numquam, eum, ex repellat. Iure maxime, voluptatem.</div>
-           <div class="tab-pane fade" id="list-js-lesson2" role="tabpanel" aria-labelledby="list-js-lesson2-list">r JSBBBBBBB et, sequi numquam explicabo, architecto quae voluptatem a omnis libero, minima aperiam. Odit aliquam molestiae beatae velit iure consequatur ex voluptas obcaecati impedit. At, ad dolorem aut voluptas nulla obcaecati reprehenderit modi. Accusantium modi placeat voluptatum eum hic eveniet minus sequi ullam maiores praesentium, aut beatae labore eligendi officia dicta cum autem, esse, blanditiis veniam! Sit minus magni inventore ratione est numquam, eum, ex repellat. Iure maxime, voluptatem.</div>
-           <div class="tab-pane fade" id="list-js-lesson3" role="tabpanel" aria-labelledby="list-js-lesson3-list">r JSCCCCCCCCCCC et, sequi numquam explicabo, architecto quae voluptatem a omnis libero, minima aperiam. Odit aliquam molestiae beatae velit iure consequatur ex voluptas obcaecati impedit. At, ad dolorem aut voluptas nulla obcaecati reprehenderit modi. Accusantium modi placeat voluptatum eum hic eveniet minus sequi ullam maiores praesentium, aut beatae labore eligendi officia dicta cum autem, esse, blanditiis veniam! Sit minus magni inventore ratione est numquam, eum, ex repellat. Iure maxime, voluptatem.</div>
-      
-    </div>
+<% @lessons.each do |lesson| %>
+<div class="media1 list-<%= lesson.name %>-list">
+<!--  <img class="mr-3" src="comments64.png" alt="Generic placeholder image">-->
+  <% lesson.comments.each do |comment| %>
+   <%=  image_tag image_path('comments64.png'), alt: 'My comment', class: "mr-3" %>
+  <div class="media-body list-<%= comment.subject %>-list">
+    <h5 class="mt-0"><%= comment.subject %></h5>
+    <p><%= comment.description %></p>
   </div>
-  
-  
-  </div>
+  <% end %>
+</div>
+<% end %>
 
+ <br>
+ 
+  <div class="col-8 text-center">
+      <%=link_to 'Create Comment', new_comment_path %>
+  </div>
+  <br>
+  
+ <form class="form col-lg-6 col-md-8">
+   <div class="form-group">
+    <label for="formGroupExampleInput">Submit Comments</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Subject">
+   </div>
+   <div class="form-group">
+<!--    <label for="exampleFormControlTextarea1">Example textarea</label>-->
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="comments"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
 
    
