@@ -1,4 +1,22 @@
-<% @languages.each do |language| %>
-<%=language.name %>
-<%=language.description %>
-<% end %>
+<div class="container">
+
+  <% @languages.each do |language| %>
+    <div class="row">
+      <div class="col-lg-12">
+        <%=language.name %>
+        <%=language.description %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <%= link_to 'Edit Language', edit_language_path(language) %>
+      </div>
+      <div class="col-lg-6">
+        <%= link_to 'Delete Language', language_path(language), method: :delete %>
+      </div>
+    </div>
+  <% end %>
+
+  <%= render 'admins/shared/adminlinks' %>
+
+</div>
