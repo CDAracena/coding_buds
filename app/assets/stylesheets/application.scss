@@ -9,71 +9,32 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
-
  *= require bootstrap/dist/css/bootstrap
  *= require mdbootstrap/css/mdb
- *= require  bootstrap/scss/bootstrap.scss
+ *= require bootstrap/scss/bootstrap.scss
  *= require_tree .
  *= require_self
  */
 
-//@import "font-awesome";
-.h1 {
-
-    text-align: center;
-}
-
-a.list-group-item-success {
-    text-align: center;
-    font-size: 30px;
-}
-
-a.language {
-    margin-left: 15px;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-
-.navbar {
-    background-color: #7979d2;
-}
-
-.navbar-brand {
-    color: white !important;
-}
-
-.form {
-    //    width: 60%;
-    margin: 0 auto;
-}
-
-.form-group label {
-    font-size: 20px;
-    font-weight: 500;
-}
 
 .code-buds-example {
-    background-color: #f1f1f1;
-    padding: 0.01em 16px;
-    margin: 20px 0;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+  background-color: #002b36;
+  color: #93a1a1;
+  padding: 0.01em 16px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px 0
+  rgba(0,0,0,0.16),0 2px 10px 0
+  rgba(0,0,0,0.12)!important;
 }
-
 .sp_medi {
-    color: mediumblue;
+  color:mediumblue;
 }
-
 .sp_brown {
-    color: brown;
+  color: brown;
 }
-
 .sp_red {
-    color: red;
+  color: red;
 }
-
 .sp_black {
-    color: black;
-
+  color: black;
 }
