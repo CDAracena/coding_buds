@@ -12,38 +12,42 @@
   </head>
 
   <body>
-  
+
  <div class="row">
   <div class="col-4">
     <div class="list-group" id="list-tab" role="tablist">
       <a class="list-group-item-success list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
     <% @languages.each do |language| %>
       <a class="list-group-item list-group-item-action language" id="list-<%= language.name %>-list" data-toggle="list" href="#list-<%= language.name %>" role="tab" aria-controls="<%= language.name %>"><i class="fa fa-code fa-2x fa-pull-left" aria-hidden="true"></i><%= language.name %></a>
-         <% language.lessons.each do |lesson| %> 
+         <% language.lessons.each do |lesson| %>
           <a class="list-group-item list-group-item-action" id="list-<%= lesson.name %>-list" data-toggle="list" href="#list-<%= lesson.name %>" role="tab" aria-controls="<%= lesson.name %>"> <%= lesson.name %></a>
-         
+
         <% end %>
-    
-    <% end %>    
+
+    <% end %>
   </div>
   </div>
-  
 
 
-  
+
+
   <div class="col-8">
     <div class="tab-content" id="nav-tabContent">
       <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">Home Home ipsum dolor sit amet, consectetur adipisicing elit. Amet, perspiciatis iure qui porro, quaerat esse fugit ipsam minima eveniet magnam temporibus? Cupiditate quam pariatur fugit sapiente iusto laudantium ab illum consectetur nihil et, sequi numquam explicabo, architecto quae voluptatem a omnis libero, minima aperiam. Odit aliquam molestiae beatae velit iure consequatur ex voluptas obcaecati impedit. At, ad dolorem aut voluptas nulla obcaecati reprehenderit modi. Accusantium modi placeat voluptatum eum hic eveniet minus sequi ullam maiores praesentium, aut beatae labore eligendi officia dicta cum autem, esse, blanditiis veniam! Sit minus magni inventore ratione est numquam, eum, ex repellat. Iure maxime, voluptatem.</div>
          <% @languages.each do |language| %>
       <div class="tab-pane fade" id="list-<%= language.name %>" role="tabpanel" aria-labelledby="list-<%= language.name %>-list"><%= language.description %></div>
-      
-        <% language.lessons.each do |lesson| %> 
-           <div class="tab-pane fade" id="list-<%= lesson.name %>" role="tabpanel" aria-labelledby="list-<%= lesson.name %>-list"><%= lesson.description %></div>
-        <% end %> 
-    <% end %> 
-          
-      
-      
+
+        <% language.lessons.each do |lesson| %>
+           <div class="tab-pane fade" id="list-<%= lesson.name %>" role="tabpanel" aria-labelledby="list-<%= lesson.name %>-list">
+        <h4><%= lesson.description %></h4>
+             <%= lesson.syntax.html_safe %>
+
+           </div>
+        <% end %>
+    <% end %>
+
+
+
     </div>  <!--  Endo of  <div class="tab-content" id="nav-tabContent">-->
   </div>   <!--  Endo of <div class="col-8">-->
 </div>
@@ -64,12 +68,12 @@
 <% end %>
 
  <br>
- 
+
   <div class="col-8 text-center">
       <%=link_to 'Create Comment', new_comment_path %>
   </div>
   <br>
-  
+
  <form class="form col-lg-6 col-md-8">
    <div class="form-group">
     <label for="formGroupExampleInput">Submit Comments</label>
@@ -83,7 +87,7 @@
 </form>
 
 
-   
+
   </body>
-    
+
 </html>
