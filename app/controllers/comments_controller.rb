@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
     def create
         Comment.create(comments_params)
         flash[:success]='You have successfully created comment'
-        redirect_to comments_path
+        redirect_to root_path
     end
     
     def edit
