@@ -11,7 +11,7 @@
 // about supported directives.
 //
 
-//= require jQuery/tmp/jquery
+//= require jQuery/dist/jquery
 //= require tether/dist/js/tether
 
 //= require bootstrap/dist/js/bootstrap.min
