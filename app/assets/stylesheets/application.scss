@@ -13,6 +13,7 @@
  *= require bootstrap/dist/css/bootstrap
  *= require enlighterjs/Build/EnlighterJS.css
  *= require bootstrap/scss/bootstrap.scss
+ *= require toastr/build/toastr.css
  *= require_tree .
  *= require_self
  */
@@ -38,4 +39,16 @@
 }
 .sp_black {
   color: black;
+}
+
+
+
+
+a.AdminHome {
+  color: white;
+  text-decoration: none;
+}
+
+a.AdminHome:hover {
+  color: #b9ccd2;
 }

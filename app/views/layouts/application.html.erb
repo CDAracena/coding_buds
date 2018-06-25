@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
-
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
@@ -19,9 +19,10 @@
   </form>
 </nav>
    <br>
+   <%=custom_bootstrap_flash %>
 
     <%= yield %>
 
-    <%= javascript_include_tag 'application' %>
+
   </body>
 </html>
