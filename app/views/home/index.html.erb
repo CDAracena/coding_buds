@@ -43,11 +43,24 @@
                 <h4><%= lesson.description %></h4>
                 <pre data-enlighter-language="<%=lesson.language.name %>">
                 <%= lesson.syntax %>
-              </pre>
+                </pre>
+                <div class="container">
+                  <div class="box">
+                    <textarea class="innerbox-html" placeholder="Enter HTML Here"></textarea>
+                    <textarea class="innerbox-css" placeholder="Enter CSS Here"></textarea>
+                    <div class="innerbox-preview">
+                      <iframe class="live-update">
+                      <!DOCTYPE html>
+                      <html lang="en">
+                      <head><meta charset='utf-8'></head>
+                        <body></body>
+                        </html>
+                      </iframe>
+                    </div>
+                  </div>
               </div>
             <% end %>
           <% end %>
-
         </div>
         <!-- Endo of <div class="tab-content" id="nav-tabContent">-->
       </div>
