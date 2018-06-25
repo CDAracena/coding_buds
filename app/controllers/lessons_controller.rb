@@ -45,6 +45,12 @@ def destroy
 
 end
 
+    def search 
+        par = params[:search_text].downcase
+      @lessons = Lesson.where("lower(syntax) LIKE lower(?)", "%#{par}%").all
+        
+    end
+    
 private
 
 def lessons_params

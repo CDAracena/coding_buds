@@ -4,6 +4,8 @@ class AdminsController < ApplicationController
 
   def index
     @admin = Admin.all
+     console
+      
 end
 
 def show
