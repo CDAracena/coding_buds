@@ -10,19 +10,24 @@ def show
 end
 
 def new
+  @languages = Language.all
   @language = Language.new
 
 end
 
 def create
-  Language.create(languages_params)
-
-  redirect_to languages_path
+  language = Language.create(languages_params)
+  if language.invalid?
+    flash[:error] = "Language already exists, please try another one"
+    redirect_to new_language_path
+  else
+    flash[:success] = "Great, your new language has been created!"
+    redirect_to languages_path
+  end
 end
 
 def edit
   @language = Language.find(params[:id])
-
 
 end
 
