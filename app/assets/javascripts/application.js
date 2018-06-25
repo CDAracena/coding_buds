@@ -10,15 +10,15 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-
-//= require jQuery/tmp/jquery
+//= require rails-ujs
+//= require jQuery/dist/jquery
 //= require tether/dist/js/tether
+//= require bootstrap/dist/js/bootstrap
 
 //= require mootools/dist/mootools-core.min
 //= require enlighterjs/Build/EnlighterJS.min
 
 //= require mdbootstrap/js/mdb
 
-//= require rails-ujs
-//= require activestorage
+
 //= require_tree .
