@@ -10,11 +10,10 @@ $(document).ready(function () {
     let mydiv = document.querySelector('.row .col-2');
 
     mydiv.addEventListener('click', function (e) {
-        id = e.target.id;
+        let id = e.target.id;
         $('.media1').css('display', 'none');
-        divs = document.querySelector(`.${id}`);
+        let divs = document.querySelector(`.${id}`);
         if (divs != null) {
-
             $(`.${id}`).css('display', 'block');
         }
     });
