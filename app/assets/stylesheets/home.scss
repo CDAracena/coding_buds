@@ -95,6 +95,7 @@ a.language:hover {
 }
 
 .innerbox {
+
     border: 1px solid #ccc;
     padding: 10px;
 }
@@ -135,3 +136,52 @@ a.language:hover {
     background-color: #e0ebeb;
     padding: 10px;
 }
+=======
+ border:1px
+ solid #ccc;
+ padding: 10px;
+}
+ .preview {
+   border: 1px solid #ccc;
+ }
+
+ .your-result {
+   columns: 1;
+   rows: 1;
+   border-radius: 5px;
+   border: 1px solid #2e5726;
+   background-color: #c3e6cb;
+   width: 700px;
+   height: 150px;
+   margin-left: 250px;
+ }
+ .your-code {
+   margin-left: 180px;
+   border-radius: 5px;
+   border: 1px solid #c3e6cb;
+   padding: 10px;
+
+ }
+ .your-styles {
+   padding: 10px;
+   border-radius: 5px;
+   border: 1px solid #c3e6cb;
+ }
+ .list-group {
+   box-shadow: 1px 2px 5px #a9b7a6;
+ }
+
+
+.descriptionText {
+  text-align: center;
+  color: #f4f4f4;
+  background-color: #2e5825;
+  border-radius: 5px;
+}
+
+ .box-shadow{
+   box-shadow: 1px, 1px, 1px, 3px;
+   background-color: whitesmoke;
+ }
+
+
