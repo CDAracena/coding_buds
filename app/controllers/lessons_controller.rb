@@ -1,6 +1,19 @@
 class LessonsController < ApplicationController
   before_action :authenticate_admin!
   skip_before_action :verify_authenticity_token, only: [:destroy]
+
+
+  def search 
+        words = params[:search_text].downcase.split()
+        search_string = []
+          for word in words
+              search_string.push("lower(syntax) LIKE ?")
+          end
+        words = words.map {|w| "%#{w}%"}
+         @lessons = Lesson.where(search_string.join(' OR '), *words).all
+
+    end
+
   def index
     @lessons = Lesson.all
 end
@@ -45,12 +58,12 @@ def destroy
 
 end
 
-    def search 
+    def search
         par = params[:search_text].downcase
       @lessons = Lesson.where("lower(syntax) LIKE lower(?)", "%#{par}%").all
-        
+
     end
-    
+
 private
 
 def lessons_params
