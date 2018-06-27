@@ -59,6 +59,28 @@
                 <style class="style-result"></style>
               </div>
 
+
+        </div>
+        <!-- Endo of <div class="tab-content" id="nav-tabContent">-->
+      </div>
+      <!-- Endo of <div class="col-8">-->
+    </div>
+    <!-- End of <div class="row">-->
+    <br>
+    <% @lessons.each do |lesson| %>
+      <div class="media1 list-<%= lesson.name.delete(" ") %>-list">
+        <!-- <img class="mr-3" src="comments64.png" alt="Generic placeholder image">-->
+       
+        <% lesson.comments.each_with_index do |comment, index| %>
+          <div class="comment-div">
+              <%= image_tag image_path(@imgs[index % @imgs.length]), alt: 'My comment', class: "mr-3" %>
+              <div class="media-body list-<%= comment.subject.delete(" ") %>-list">
+                <h5 class="mt-0"><%= comment.subject %></h5>
+                <p><%= comment.description %></p>
+              </div>
+          </div>
+        <% end %>
+
         <% end %>
       <% end %>
 
@@ -77,6 +99,7 @@
       <div class="media-body list-<%= comment.subject.delete(" ") %>-list">
         <h5 class="mt-0"><%= comment.subject %></h5>
         <p><%= comment.description %></p>
+
       </div>
     <% end %>
   </div>
@@ -110,4 +133,4 @@
 
 </body>
 
-</html>
+
