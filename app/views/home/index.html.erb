@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>CodingBuds</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-  </head>
 
   <body>
 
@@ -45,6 +34,10 @@
                 <pre data-enlighter-language="<%=lesson.language.name.delete(" ") %>">
                 <%= lesson.syntax %>
               </pre>
+              <textarea class="your-code" cols="30" row="10" placeholder="Enter HTML Here"></textarea>
+              <textarea class="your-styles" cols="30" row="10" placeholder="Enter CSS Here"></textarea>
+              <div class="your-result"></div>
+              <style class="style-result"></style>
               </div>
             <% end %>
           <% end %>
@@ -70,7 +63,7 @@
     <% end %>
 
     <br>
-      
+
     <div class="col-12 text-center">
       <%=link_to 'Create Comment for Lesson', new_comment_path, class: "comment_tag" %>
     </div>

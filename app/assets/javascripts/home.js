@@ -3,7 +3,9 @@
 
 
 $(document).ready(function () {
-
+  if(document.querySelector('body.home.index') == undefined) {
+    return;
+  }
     let mydiv = document.querySelector('.row .col-2');
 
     mydiv.addEventListener('click', function (e) {
@@ -14,13 +16,28 @@ $(document).ready(function () {
 
             $(`.${id}`).css('display', 'block');
         }
-    })
+    });
+    console.log('your-code')
+    let codeTextAreas = document.querySelectorAll('.your-code');
+    let codeResultDivs = document.querySelectorAll('.your-result');
 
-    a = $(".form-control.mr-sm-2").val();
-    console.log(a);
+    for (let i = 0; i < codeTextAreas.length; ++i) {
+      let code = codeTextAreas[i];
+      let result = codeResultDivs[i];
+      code.addEventListener('keyup', function(){
+        result.innerHTML = code.value
+      });
+    }
+
+    let stylesTextAreas = document.querySelectorAll('.your-styles');
+    let styleResult = document.querySelectorAll('.style-result');
 
 
+    for (let j = 0; j < stylesTextAreas.length; ++j){
+      let style = stylesTextAreas[j];
+      let styler = styleResult[j];
+      style.addEventListener('keyup', function(){
+        styler.innerText = style.value
+      });
+  }
 });
-
-
-
