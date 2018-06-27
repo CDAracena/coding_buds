@@ -29,9 +29,15 @@
             <%= language.description %>
           </div>
 
+
+            <% language.lessons.each do |lesson| %>
+              <div class="tab-pane fade" id="list-<%= lesson.name.delete(" ") %>" role="tabpanel" aria-labelledby="list-<%= lesson.name.delete(" ") %>-list">
+                <h2 class="descriptionText"><%= lesson.description %></h2>
+
           <% language.lessons.each do |lesson| %>
             <div class="tab-pane fade" id="list-<%= lesson.name.delete(" ") %>" role="tabpanel" aria-labelledby="list-<%= lesson.name.delete(" ") %>-list">
                 <h4><%= lesson.description %></h4>
+
                 <pre data-enlighter-language="<%=lesson.language.name.delete(" ") %>">
                   <%= lesson.syntax %>
                 </pre>
@@ -78,10 +84,25 @@
 
 <br>
 
+
+<!--
+    <form class="form col-lg-6 col-md-8">
+      <div class="form-group">
+        <label for="formGroupExampleInput">Submit Comments</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Subject">
+      </div>
+      <div class="form-group">
+         <label for="exampleFormControlTextarea1">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="comments"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form> -->
+
 <div class="col-12 text-center">
   <%=link_to 'Create Comment for Lesson', new_comment_path, class: "comment_tag" %>
 </div>
 <br>
+
 
 <!-- <form class="form col-lg-6 col-md-8"> <div class="form-group"> <label for="formGroupExampleInput">Submit Comments</label> <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Subject"> </div> <div class="form-group">
 <label for="exampleFormControlTextarea1">Example textarea</label> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="comments"></textarea> </div> <button type="submit" class="btn btn-primary">Submit</button> </form>

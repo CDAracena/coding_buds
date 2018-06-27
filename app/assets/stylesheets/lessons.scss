@@ -1,11 +1,6 @@
 // Place all the styles related to the Lessons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.lessons_container {
-    font-size: 25px;
-    box-shadow: 1px 1px 1px 1px #7878d2;
-    border-radius: 25px;
-}
 
 .lesson_edit_head_font {
     color: #7878d2;
@@ -16,7 +11,7 @@
     font-size: 25px;
     box-shadow: 3px 3px 5px 4px lightgrey;
     border-radius: 10px;
-    background-color: #7878d2;
+    background-color: #2e5825;
     color: white;
     border: 10px solid white;
     width: 50%;
@@ -45,7 +40,7 @@
 }
 
 .lesson_head_font {
-    color: #7878d2;
+    color: whitesmoke;
     font-size: 40px;
 
 }
