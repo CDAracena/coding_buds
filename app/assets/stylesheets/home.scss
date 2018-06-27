@@ -21,8 +21,12 @@ a.list-group-item-success {
     font-size: 30px;
 }
 
+.list-group-item-action {
+    //    width: 200px;
+}
+
 a.language {
-    margin-left: 15px;
+    padding-left: 15px;
     font-size: 16px;
     font-weight: 600;
 }
@@ -36,8 +40,12 @@ a.language {
     color: white !important;
 }
 
+.navbar-brand:hover {
+    color: red !important;
+}
+
 .form {
-    //    width: 60%;
+
     margin: 0 auto;
 }
 
@@ -52,6 +60,12 @@ a.language {
     margin: 20px 0;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
 }
+
+
+.comment_tag {
+    font-size: 30px;
+}
+
 .innerbox {
  border:1px
  solid #ccc;
@@ -76,3 +90,4 @@ a.language {
  .your-styles {
    border: 1px solid orange;
  }
+

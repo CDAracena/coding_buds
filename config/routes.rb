@@ -4,6 +4,13 @@ Rails.application.routes.draw do
    sessions: 'admins/sessions'
 }
 root 'home#index'
-resources :admins, :comments, :languages, :lessons
+resources :admins, :comments, :languages
+resources :lessons do
+   collection do
+       get 'search'
+   end
+end
+    
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
