@@ -17,14 +17,14 @@
     </div>
     <div class="row mx-auto py-1 justify-content-center">
       <div class="col-lg-8">
-        <pre data-enlighter-language="<%=lesson.language.name %>">
+        <pre data-enlighter-language="<%=lesson.language.name%>">
       <%= lesson.syntax %>
     </pre>
       </div>
     </div>
     <div class="row mx-auto-py-1">
       <div class="col-lg text-center">
-        <%= link_to 'Edit Lesson', edit_lesson_path(lesson), class:'editNDelete' %> |
+        <%= link_to 'Edit Lesson', edit_lesson_path(lesson), class:'editNDelete' %>
 
         <%= link_to 'Delete Lesson', lesson_path(lesson), method: :delete, class:'editNDelete' %>
       </div>

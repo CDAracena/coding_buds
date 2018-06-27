@@ -60,6 +60,19 @@ a.language {
  .preview {
    border: 1px solid #ccc;
  }
- iframe {
-   border: 1px solid red;
+
+ .your-result {
+   columns: 1;
+   rows: 1;
+   border: 1px solid purple;
+   width: 400px;
+   height: 400px;
+   margin-left: 250px;
+ }
+ .your-code {
+   margin-left: 180px;
+   border: 1px solid orange;
+ }
+ .your-styles {
+   border: 1px solid orange;
  }
