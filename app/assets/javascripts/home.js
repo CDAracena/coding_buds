@@ -1,6 +1,7 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
+
 $(document).ready(function () {
 
     let mydiv = document.querySelector('.row .col-2');
@@ -20,3 +21,6 @@ $(document).ready(function () {
 
 
 });
+
+
+

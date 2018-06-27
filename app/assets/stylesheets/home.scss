@@ -61,6 +61,33 @@ a.language {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
 }
 
+
 .comment_tag {
     font-size: 30px;
 }
+
+.innerbox {
+ border:1px
+ solid #ccc;
+ padding: 10px;
+}
+ .preview {
+   border: 1px solid #ccc;
+ }
+
+ .your-result {
+   columns: 1;
+   rows: 1;
+   border: 1px solid purple;
+   width: 400px;
+   height: 400px;
+   margin-left: 250px;
+ }
+ .your-code {
+   margin-left: 180px;
+   border: 1px solid orange;
+ }
+ .your-styles {
+   border: 1px solid orange;
+ }
+

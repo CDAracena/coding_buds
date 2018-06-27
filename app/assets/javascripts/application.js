@@ -11,14 +11,12 @@
 // about supported directives.
 //
 //= require rails-ujs
+//
 //= require jQuery/dist/jquery
 //= require tether/dist/js/tether
 //= require bootstrap/dist/js/bootstrap
-
+//= require toastr/build/toastr.min.js
 //= require mootools/dist/mootools-core.min
 //= require enlighterjs/Build/EnlighterJS.min
-
-//= require mdbootstrap/js/mdb
-
 
 //= require_tree .
