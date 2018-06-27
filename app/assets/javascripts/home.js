@@ -3,7 +3,7 @@
 
 $(document).ready(function () {
 
-    let mydiv = document.querySelector('.row .col-4');
+    let mydiv = document.querySelector('.row .col-2');
 
     mydiv.addEventListener('click', function (e) {
         id = e.target.id;

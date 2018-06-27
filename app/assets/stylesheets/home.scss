@@ -21,8 +21,12 @@ a.list-group-item-success {
     font-size: 30px;
 }
 
+.list-group-item-action {
+    //    width: 200px;
+}
+
 a.language {
-    margin-left: 15px;
+    padding-left: 15px;
     font-size: 16px;
     font-weight: 600;
 }
@@ -36,8 +40,12 @@ a.language {
     color: white !important;
 }
 
+.navbar-brand:hover {
+    color: red !important;
+}
+
 .form {
-    //    width: 60%;
+
     margin: 0 auto;
 }
 

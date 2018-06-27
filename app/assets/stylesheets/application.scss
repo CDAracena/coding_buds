@@ -17,25 +17,26 @@
  *= require_self
  */
 
-
 .code-buds-example {
-  background-color: #002b36;
-  color: #93a1a1;
-  padding: 0.01em 16px;
-  margin: 20px 0;
-  box-shadow: 0 2px 4px 0
-  rgba(0,0,0,0.16),0 2px 10px 0
-  rgba(0,0,0,0.12)!important;
+    background-color: #002b36;
+    color: #93a1a1;
+    padding: 0.01em 16px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
 }
+
 .sp_medi {
-  color:mediumblue;
+    color: mediumblue;
 }
+
 .sp_brown {
-  color: brown;
+    color: brown;
 }
+
 .sp_red {
-  color: red;
+    color: red;
 }
+
 .sp_black {
-  color: black;
+    color: black;
 }
