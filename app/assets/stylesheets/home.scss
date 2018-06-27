@@ -1,8 +1,6 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-
 .media1 {
     display: none;
     margin: auto;
@@ -23,13 +21,14 @@ a.list-group-item-success {
 }
 
 .list-group-item-action:hover {
-    //    width: 200px;
-    color: whitesmoke;
-    background-color: #2779b9c7;
+
+    //    color: whitesmoke;
+    background-color: #d1e0e0;
+
 }
 
 .list-group-item-action:focus {
-  background-color:#2779b9c7;
+    background-color: #2779b9c7;
 }
 
 a.language {
@@ -40,15 +39,15 @@ a.language {
 }
 
 a.language:hover {
-  color: whitesmoke;
-  background-color: #2779b9;
+    color: whitesmoke;
+    background-color: #2779b9;
 }
 
 .navbar {
-  background-color: #2e5825;
-  box-shadow: 1px 3px 4px #000000cf;
-  border: 1px solid #83a188;
-  box-sizing: border-box;
+    background-color: #2e5825;
+    box-shadow: 1px 3px 4px #000000cf;
+    border: 1px solid #83a188;
+    box-sizing: border-box;
 }
 
 
@@ -81,34 +80,58 @@ a.language:hover {
 
 .comment_tag {
     font-size: 30px;
+    color: #fff;
+    background-color: #2e5825;
+    border-color: #007bff;
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
+}
+
+.comment_tag:hover {
+    color: whitesmoke;
+    background-color: #2779b9c7;
+    text-decoration: none;
+    box-shadow: 5px 5px 5px #aaaaaa;
 }
 
 .innerbox {
- border:1px
- solid #ccc;
- padding: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
 }
- .preview {
-   border: 1px solid #ccc;
- }
 
- .your-result {
-   columns: 1;
-   rows: 1;
-   border: 1px solid purple;
-   width: 400px;
-   height: 400px;
-   margin-left: 250px;
+.preview {
+    border: 1px solid #ccc;
+}
 
- }
- .your-code {
-   margin-left: 180px;
-   border: 1px solid orange;
- }
- .your-styles {
-   border: 1px solid orange;
- }
- .list-group {
-   box-shadow: 1px 2px 5px #a9b7a6;
- }
+.your-result {
+    columns: 1;
+    rows: 1;
+    border: 1px solid purple;
+    width: 400px;
+    height: 400px;
+    margin-left: 250px;
 
+}
+
+.your-code {
+    margin-left: 180px;
+    border: 1px solid orange;
+}
+
+.your-styles {
+    border: 1px solid orange;
+}
+
+.list-group {
+    box-shadow: 1px 2px 5px #a9b7a6;
+}
+
+.comment-div:nth-child(even) {
+    background-color: #f0f0f5;
+    padding: 10px;
+}
+
+.comment-div:nth-child(odd) {
+    background-color: #e0ebeb;
+    padding: 10px;
+}

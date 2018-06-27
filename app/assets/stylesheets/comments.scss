@@ -3,8 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .btn-primary {
     padding: 10px;
+    background-color: #2e5825;
+    border-color: #2e5825;
+    font-size: 1.2em;
 }
 
+.btn-primary:hover {
+    cursor: pointer;
+}
 
 #comment_lesson_id {
     padding: 5px 20px;

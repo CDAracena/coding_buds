@@ -52,13 +52,17 @@
     <% @lessons.each do |lesson| %>
       <div class="media1 list-<%= lesson.name.delete(" ") %>-list">
         <!-- <img class="mr-3" src="comments64.png" alt="Generic placeholder image">-->
-        <% lesson.comments.each do |comment| %>
-          <%= image_tag image_path('comments64.png'), alt: 'My comment', class: "mr-3" %>
-          <div class="media-body list-<%= comment.subject.delete(" ") %>-list">
-            <h5 class="mt-0"><%= comment.subject %></h5>
-            <p><%= comment.description %></p>
+       
+        <% lesson.comments.each_with_index do |comment, index| %>
+          <div class="comment-div">
+              <%= image_tag image_path(@imgs[index % @imgs.length]), alt: 'My comment', class: "mr-3" %>
+              <div class="media-body list-<%= comment.subject.delete(" ") %>-list">
+                <h5 class="mt-0"><%= comment.subject %></h5>
+                <p><%= comment.description %></p>
+              </div>
           </div>
         <% end %>
+      
       </div>
     <% end %>
 
@@ -85,4 +89,4 @@
 
   </body>
 
-</html>
+
