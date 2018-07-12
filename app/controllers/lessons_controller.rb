@@ -58,6 +58,7 @@ end
 
 private
 
+    
 def lessons_params
   # will return something that looks like this:
   # {name: '....', description: '...', syntax: '...'} + {admin_id: '...'} = {name: '....', description: '...', syntax: '...', admin_id: '...'}
